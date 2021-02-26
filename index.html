@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--Map-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>IP Addres Tracker</h1>
+      <div class="input-container">
+        <input type="text" placeholder="Search for any IP address or domain" id="input-IP" />
+        <div class="img" id="button-IP"></div>
+      </div>
+      <div class="date-container">
+            <div class="ip-cont" id="date-item">
+                <h3>IP ADDRESS</h3>
+                <h5 id="ip">---</h5>
+            </div>
+            <div class="line"></div>
+              <div class="location-cont" id="date-item">
+                  <h3>LOCATION</h3>
+                  <h5 id="location">---</h5>
+              </div>
+            <div class="line"></div>
+              <div class="timezone-cont" id="date-item">
+                  <h3>TIMEZONE</h3>
+                  <h5 id="timezone">---</h5>
+              </div>
+            <div class="line"></div>
+              <div class="isp-cont" id="date-item">
+                  <h3>ISP</h3>
+                  <h5 id="isp">---</h5>               
+              </div>
+        </div>
+      
+    </header>
+    <section id="map"></section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

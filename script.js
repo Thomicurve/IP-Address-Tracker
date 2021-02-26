@@ -62,7 +62,7 @@ const mapCoords = async(ip)=>{
     
 }
 window.addEventListener("load", async ()=>{
-    let ipApi = await axios("http://worldtimeapi.org/api/ip");
+    let ipApi = await axios("https://worldtimeapi.org/api/ip");
     let ip = ipApi.data.client_ip;
     mapCoords(ip);
 });

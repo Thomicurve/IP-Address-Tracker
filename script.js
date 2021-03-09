@@ -8,6 +8,8 @@ let timeZoneText = document.getElementById("timezone");
 let ipInput = document.getElementById("input-IP");
 let buttonSearch = document.getElementById("button-IP");
 
+let loader = document.querySelector(".loader-container");
+
 const putDates = (ip, city, regionName, isp, timeZone)=>{
     ipText.textContent = ip;
     locationText.textContent = `${city}, ${regionName}`;
@@ -18,6 +20,9 @@ const getApi = async (ip)=>{
     try{
         //Get APIS
         let datesApi = await axios(`https://geo.ipify.org/api/v1?apiKey=at_qweVP6uO7S5XjsItf4u6GJ2PkqJkG&domain=${ip}`);
+        loader.style.opacity = "0";
+        setTimeout(()=>loader.style.visibility = "hidden", 1000);
+        
         console.log(datesApi);
         //API DATES Show
         let city = datesApi.data.location.city;

@@ -30,7 +30,7 @@ const getApi = async (ip)=>{
         let timeZone = datesApi.data.location.timezone;
         let isp = datesApi.data.isp;
         let ipAddress = datesApi.data.ip;
-        // //API DATES map
+        //API DATES map
         let lat = datesApi.data.location.lat; let lon = datesApi.data.location.lng;
         putDates(ipAddress, city, region, isp, timeZone);
 
@@ -67,9 +67,9 @@ const mapCoords = async(ip)=>{
     
 }
 window.addEventListener("load", async ()=>{
-    let ipApi = await axios("https://worldtimeapi.org/api/ip");
-    let ip = ipApi.data.client_ip;
-    mapCoords(ip);
+    // let ipApi = await axios("https://worldtimeapi.org/api/ip");
+    // let ip = ipApi.data.client_ip;
+    mapCoords('');
 });
 
 buttonSearch.addEventListener("click", ()=>{

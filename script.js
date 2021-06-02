@@ -23,7 +23,6 @@ const getApi = async (ip)=>{
         loader.style.opacity = "0";
         setTimeout(()=>loader.style.visibility = "hidden", 1000);
         
-        console.log(datesApi);
         //API DATES Show
         let city = datesApi.data.location.city;
         let region = datesApi.data.location.region;
